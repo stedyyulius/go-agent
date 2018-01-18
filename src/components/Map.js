@@ -51,7 +51,7 @@ function makeExampleMapper(useGoogleMaps) {
   return example => example;
 }
 
-class App extends React.Component {
+class Map extends React.Component {
   constructor(props) {
     super(props);
 
@@ -191,4 +191,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = App;
+module.exports = Map;
