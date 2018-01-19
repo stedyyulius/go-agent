@@ -32,7 +32,7 @@ class Home extends Component{
         <Text>
           latitude = {this.state.latitude}, longitude = {this.state.longitude}
         </Text>
-        <Map />
+        {/*<Map />*/}
       </View>
     )
   }
@@ -40,14 +40,14 @@ class Home extends Component{
 
 const styles = StyleSheet.create({
   container: {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  justifyContent: 'flex-end',
-  alignItems: 'center',
-}
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
 })
 
 const mapStateToProps = (state) =>{
