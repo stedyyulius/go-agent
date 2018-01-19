@@ -11,12 +11,27 @@ import Map from '../components/Map'
 class Home extends Component{
   constructor(props){
     super(props)
-    this.state={}
+    this.state= {
+      latitude: 0,
+      longitude: 0
+    }
+  }
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(position => {
+      this.setState({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      })
+    })
   }
 
   render(){
     return(
       <View style={styles.container}>
+        <Text>
+          latitude = {this.state.latitude}, longitude = {this.state.longitude}
+        </Text>
         <Map />
       </View>
     )
